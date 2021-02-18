@@ -1,5 +1,5 @@
 """
-@author: Akash Agarwal, Nupur Nimbekar, Anubhava Paras - ENPM673 HW1
+
 """
 import numpy as np
 class LinearLeastSqaureModel:
