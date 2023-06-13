@@ -47,7 +47,13 @@ def fit_curve(data):
 if __name__ == '__main__':
 
     #reading the values
-    df1 = pd.read_csv('data_1.csv')
+    df1 = pd.read_csv('data_3.txt', sep='\t', header=None, names=['ph', 'y'])
+    df1 = df1.reset_index()
+    df1 = df1.rename(columns={"index":"x"})
+    df1['x'] = df1.index + 0
+
+    print(df1.head())
+    #df1 = pd.read_csv('data_1.csv')
     df2 = pd.read_csv('data_2.csv')
     
     ls_model_y1, ransac_model_y1 = fit_curve(df1)
